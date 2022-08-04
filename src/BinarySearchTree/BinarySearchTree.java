@@ -48,6 +48,29 @@ public class BinarySearchTree {
 		}
 	}
 
+	/* Functions to search for an element */
+	public boolean search(int val) {
+		return search(root, val);
+	}
+
+	/* Function to search for an element recursively */
+	private boolean search(BinarySearchTreeNode r, int val) {
+		boolean found = false;
+		while ((r != null) && !found) {
+			int rval = r.getData();
+			if (val < rval)
+				r = r.getLeft();
+			else if (val > rval)
+				r = r.getRight();
+			else {
+				found = true;
+				break;
+			}
+			found = search(r, val);
+		}
+		return found;
+	}
+
 	/* Function for inorder traversal */
 	public void inorder() {
 		inorder(root);

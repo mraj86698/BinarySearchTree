@@ -9,6 +9,7 @@ public class BinarySearchTreeMain {
 			System.out.println("\nBinary Search Tree Operations\n");
 			System.out.println("1. Insert ");
 			System.out.println("2. Count Nodes");
+			System.out.println("3. Search");
 			System.out.println("\nEnter Your Options: \n");
 
 			int choice = Utility.inputInteger();
@@ -19,6 +20,10 @@ public class BinarySearchTreeMain {
 				break;
 			case 2:
 				System.out.println("Nodes = " + bst.countNodes());
+				break;
+			case 3:
+				System.out.println("Enter integer element to search");
+				System.out.println("Search result : " + bst.search(Utility.inputInteger()));
 				break;
 
 			default:
