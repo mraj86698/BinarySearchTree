@@ -7,15 +7,18 @@ public class BinarySearchTreeMain {
 		System.out.println("Binary Search Tree Test\n");
 		while (true) {
 			System.out.println("\nBinary Search Tree Operations\n");
-			System.out.println("1. insert ");
-			System.out.println("Enter Your Option:");
-
+			System.out.println("1. Insert ");
+			System.out.println("2. Count Nodes");
+			System.out.println("\nEnter Your Options: \n");
 
 			int choice = Utility.inputInteger();
 			switch (choice) {
 			case 1:
 				System.out.println("Enter integer element to insert");
 				bst.insert(Utility.inputInteger());
+				break;
+			case 2:
+				System.out.println("Nodes = " + bst.countNodes());
 				break;
 
 			default:
@@ -30,8 +33,7 @@ public class BinarySearchTreeMain {
 			System.out.print("\nIn order : ");
 			bst.inorder();
 
-			System.out.println("\nEnter Your Options: \n");
-		}
+					}
 
 	}
 

@@ -31,7 +31,22 @@ public class BinarySearchTree {
 		return node;
 	}
 
+	/* Functions to count number of nodes */
+	public int countNodes() {
+		return countNodes(root);
+	}
 
+	/* Function to count number of nodes recursively */
+	private int countNodes(BinarySearchTreeNode r) {
+		if (r == null)
+			return 0;
+		else {
+			int l = 1;
+			l += countNodes(r.getLeft());
+			l += countNodes(r.getRight());
+			return l;
+		}
+	}
 
 	/* Function for inorder traversal */
 	public void inorder() {
